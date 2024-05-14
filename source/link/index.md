@@ -2,7 +2,7 @@
 {}
 title: link
 date: 2024-05-12 10:46:39
-type: "link"
+type:
 updated:
 comments:
 description:

@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: {{ title }}  
 date: {{ date }}    
 abbrlink:           
@@ -6,8 +6,8 @@ categories:
 tags:               
 cover:              
 description:        
---- -->
 ---
+<!-- ---
 title:                  # 【必须】文章标题
 date:                   # 【必须】文章创建日期
 updated:                # 【可选】文章更新日期
@@ -30,4 +30,4 @@ katex:                  # 【可选】显示katex (当设置 katex 的 per_page:
 aplayer:                # 【可选】在需要的页面加载 aplayer 的 js 和 css,请参考文章下面的音乐 配置
 highlight_shrink:       # 【可选】配置代码框是否展开(true/false)(默认为设置中 highlight_shrink 的配置)
 aside:                  # 【可选】显示侧边栏 (默认 true)
----
+--- -->

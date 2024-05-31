@@ -1,0 +1,594 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2024年5月31日-Java面试题 | jackAAAAA's Blog</title><meta name="author" content="JackAAAAA"><meta name="copyright" content="JackAAAAA"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="2024年5月31日Java面试题打卡">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024年5月31日-Java面试题">
+<meta property="og:url" content="http://example.com/posts/f2c6e9a2.html">
+<meta property="og:site_name" content="jackAAAAA&#39;s Blog">
+<meta property="og:description" content="2024年5月31日Java面试题打卡">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2024-05-31T07:32:37.000Z">
+<meta property="article:modified_time" content="2024-05-31T09:04:11.535Z">
+<meta property="article:author" content="JackAAAAA">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="专业基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/f2c6e9a2.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":300,"languages":{"author":"作者: JackAAAAA","link":"链接: ","source":"来源: jackAAAAA's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2024年5月31日-Java面试题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-31 17:04:11'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="jackAAAAA's Blog"><img class="site-icon" src="https://cdn.discordapp.com/attachments/1235036768898781255/1235050492300759131/smithstephanie9186_A_vivid_spring_landscape_blooming_flowers_of_d7e17e3a-e6d0-40de-925c-e5cd3f3220d5.png?ex=66417667&amp;is=664024e7&amp;hm=51725b9743e872c4e58e44f67061f49b04bd55d6293a41c4f9329187b5b18146&amp;"/><span class="site-name">jackAAAAA's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">2024年5月31日-Java面试题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-31T07:32:37.000Z" title="发表于 2024-05-31 15:32:37">2024-05-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-31T09:04:11.535Z" title="更新于 2024-05-31 17:04:11">2024-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="2024年5月31日-Java面试题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="java-io-1-？"><a href="#java-io-1-？" class="headerlink" title="java-io(1)？"></a>java-io(1)？</h1><h2 id="一、字节与字符"><a href="#一、字节与字符" class="headerlink" title="一、字节与字符"></a>一、字节与字符</h2><p>在 Java 中输入、输出有两种方式：字节流和字符流。它们分别以字节和字符为单位进行操作。在字符流中，每次操作的是一个字符，而在字节流中，每次操作的是一个字节。<br>但字符与字节之间的区别到底是什么？</p>
+<p>Java 是 Unicode 编码，每个字符占用两个字节，而在 ASCII 编码中，每个字符占用一个字节。字符流主要处理字符文本，而字节流主要处理字节数据，例如图片和音频文件。</p>
+<h3 id="Java-中的字符串处理（Unicode）示例代码："><a href="#Java-中的字符串处理（Unicode）示例代码：" class="headerlink" title="Java 中的字符串处理（Unicode）示例代码："></a>Java 中的字符串处理（Unicode）示例代码：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UnicodeTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">char</span> <span class="variable">ch1</span> <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">        <span class="type">char</span> <span class="variable">ch2</span> <span class="operator">=</span> <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">        System.out.println(ch1);</span><br><span class="line">        System.out.println(ch2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="编码与解码："><a href="#编码与解码：" class="headerlink" title="编码与解码："></a>编码与解码：</h3><ol>
+<li>字节长度为：9</li>
+<li>字符长度为：6</li>
+<li>编码格式：UTF-8，GBK</li>
+</ol>
+<p>在 GB2312 编码或 GBK 编码中，一个汉字通常占用两个字节，而在 UTF-8 编码中，一个汉字占用三个字节。上述例子展示了字符流和字节流之间的转换与处理方式。</p>
+<h2 id="二、File-类"><a href="#二、File-类" class="headerlink" title="二、File 类"></a>二、File 类</h2><p>File 类用于表示文件和目录路径名的抽象表示形式。使用 File 类可以操作文件和目录。</p>
+<h3 id="创建文件对象："><a href="#创建文件对象：" class="headerlink" title="创建文件对象："></a>创建文件对象：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;path/to/file&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="路径分隔符："><a href="#路径分隔符：" class="headerlink" title="路径分隔符："></a>路径分隔符：</h3><ul>
+<li>Windows：”\“ 或 “&#x2F;“</li>
+<li>Linux：”&#x2F;“</li>
+</ul>
+<p>在 Windows 中，路径分隔符可以是 “&quot; 或 “&#x2F;“，而在 Linux 中，只能是 “&#x2F;”。</p>
+<h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><ul>
+<li>相对路径：”.”</li>
+<li>绝对路径：”C:\“</li>
+</ul>
+<h3 id="目录操作方法："><a href="#目录操作方法：" class="headerlink" title="目录操作方法："></a>目录操作方法：</h3><ol>
+<li>创建目录：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">mkdir</span> <span class="operator">=</span> file.mkdir();</span><br><span class="line"><span class="type">boolean</span> <span class="variable">mkdirs</span> <span class="operator">=</span> file.mkdirs();</span><br></pre></td></tr></table></figure></li>
+<li>删除文件：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">delete</span> <span class="operator">=</span> file.delete();</span><br></pre></td></tr></table></figure></li>
+<li>判断方法：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">exists</span> <span class="operator">=</span> file.exists();</span><br><span class="line"><span class="type">boolean</span> <span class="variable">isFile</span> <span class="operator">=</span> file.isFile();</span><br><span class="line"><span class="type">boolean</span> <span class="variable">isDirectory</span> <span class="operator">=</span> file.isDirectory();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="获取方法："><a href="#获取方法：" class="headerlink" title="获取方法："></a>获取方法：</h3><ol>
+<li>文件名：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> file.getName();</span><br></pre></td></tr></table></figure></li>
+<li>路径：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">path</span> <span class="operator">=</span> file.getPath();</span><br><span class="line"><span class="type">String</span> <span class="variable">absoultePath</span> <span class="operator">=</span> file.getAbsolutePath();</span><br><span class="line"><span class="type">String</span> <span class="variable">parent</span> <span class="operator">=</span> file.getParent();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>File 类不仅能操作文件，还能操作目录，它提供了一系列的方法来创建、删除、检查和操作文件和目录。</p>
+<p>以上是 Java IO 中关于字节流和字符流、以及 File 类的基础知识及其相关操作方法。</p>
+<h1 id="java-io-2-？"><a href="#java-io-2-？" class="headerlink" title="java-io(2)？"></a>java-io(2)？</h1><h2 id="一、IO的由来"><a href="#一、IO的由来" class="headerlink" title="一、IO的由来"></a>一、IO的由来</h2><p>Java 的输入输出（IO）操作分为流式 IO 和块 IO。流式 IO 以字节为单位进行操作，而块 IO 则以块（数据块）为单位进行操作。Java 的 IO 主要通过流的方式来实现数据的读写操作。</p>
+<p>在实际应用中，我们通常需要进行文件读写、网络通信等操作。这些操作的本质都是通过 IO 来实现的。Java 提供了丰富的类库来处理这些 IO 操作。</p>
+<h2 id="二、IO的分类"><a href="#二、IO的分类" class="headerlink" title="二、IO的分类"></a>二、IO的分类</h2><ol>
+<li><p>按输入和输出分类</p>
+<ul>
+<li>输入流：用来读取数据的流。</li>
+<li>输出流：用来写出数据的流。</li>
+</ul>
+<p>下图展示了输入流和输出流的简单示意图：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 输入流示例</span></span><br><span class="line"><span class="type">InputStream</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;input.txt&quot;</span>);</span><br><span class="line"><span class="type">int</span> <span class="variable">data</span> <span class="operator">=</span> in.read();</span><br><span class="line"><span class="keyword">while</span>(data != -<span class="number">1</span>) &#123;</span><br><span class="line">     System.out.println((<span class="type">char</span>) data);</span><br><span class="line">     data = in.read();</span><br><span class="line">&#125;</span><br><span class="line">in.close();</span><br><span class="line"></span><br><span class="line"><span class="type">OutputStream</span> <span class="variable">out</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(<span class="string">&quot;output.txt&quot;</span>);</span><br><span class="line">out.write(<span class="string">&quot;Hello, World!&quot;</span>.getBytes());</span><br><span class="line">out.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按字符和字节分类</p>
+<ul>
+<li>字符流：用来处理字符数据的流，如 Reader 和 Writer。</li>
+<li>字节流：用来处理字节数据的流，如 InputStream 和 OutputStream。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 字符流示例</span></span><br><span class="line"><span class="type">Reader</span> <span class="variable">reader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileReader</span>(<span class="string">&quot;input.txt&quot;</span>);</span><br><span class="line"><span class="type">int</span> <span class="variable">data</span> <span class="operator">=</span> reader.read();</span><br><span class="line"><span class="keyword">while</span>(data != -<span class="number">1</span>) &#123;</span><br><span class="line">     System.out.println((<span class="type">char</span>) data);</span><br><span class="line">     data = reader.read();</span><br><span class="line">&#125;</span><br><span class="line">reader.close();</span><br><span class="line"></span><br><span class="line"><span class="type">Writer</span> <span class="variable">writer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileWriter</span>(<span class="string">&quot;output.txt&quot;</span>);</span><br><span class="line">writer.write(<span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line">writer.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按功能分为节点流和处理流</p>
+<ul>
+<li>节点流：直接与数据源或目的地打交道，如 FileInputStream。</li>
+<li>处理流：对已有的流进行处理和包装，如 BufferedInputStream。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 节点流和处理流示例</span></span><br><span class="line"><span class="type">InputStream</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedInputStream</span>(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;input.txt&quot;</span>));</span><br><span class="line"><span class="type">int</span> <span class="variable">data</span> <span class="operator">=</span> in.read();</span><br><span class="line"><span class="keyword">while</span>(data != -<span class="number">1</span>) &#123;</span><br><span class="line">     System.out.println((<span class="type">char</span>) data);</span><br><span class="line">     data = in.read();</span><br><span class="line">&#125;</span><br><span class="line">in.close();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="三、IO的继承体系"><a href="#三、IO的继承体系" class="headerlink" title="三、IO的继承体系"></a>三、IO的继承体系</h2><p>Java 的 IO 类库有一个庞大的继承体系，主要的基类有：</p>
+<ul>
+<li>InputStream：所有字节输入流的父类。</li>
+<li>OutputStream：所有字节输出流的父类。</li>
+<li>Reader：所有字符输入流的父类。</li>
+<li>Writer：所有字符输出流的父类。</li>
+</ul>
+<p>下面是各个基类的示例代码：</p>
+<ol>
+<li><p>InputStream</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">InputStream</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;input.txt&quot;</span>);</span><br><span class="line"><span class="type">int</span> <span class="variable">data</span> <span class="operator">=</span> in.read();</span><br><span class="line"><span class="keyword">while</span>(data != -<span class="number">1</span>) &#123;</span><br><span class="line">     System.out.println((<span class="type">char</span>) data);</span><br><span class="line">     data = in.read();</span><br><span class="line">&#125;</span><br><span class="line">in.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Reader</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Reader</span> <span class="variable">reader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileReader</span>(<span class="string">&quot;input.txt&quot;</span>);</span><br><span class="line"><span class="type">int</span> <span class="variable">data</span> <span class="operator">=</span> reader.read();</span><br><span class="line"><span class="keyword">while</span>(data != -<span class="number">1</span>) &#123;</span><br><span class="line">     System.out.println((<span class="type">char</span>) data);</span><br><span class="line">     data = reader.read();</span><br><span class="line">&#125;</span><br><span class="line">reader.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>OutputStream</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">OutputStream</span> <span class="variable">out</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(<span class="string">&quot;output.txt&quot;</span>);</span><br><span class="line">out.write(<span class="string">&quot;Hello, World!&quot;</span>.getBytes());</span><br><span class="line">out.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Writer</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Writer</span> <span class="variable">writer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileWriter</span>(<span class="string">&quot;output.txt&quot;</span>);</span><br><span class="line">writer.write(<span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line">writer.close();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>这些类提供了基本的读写功能，开发者可以根据需要选择合适的类来进行 IO 操作。为了提高效率，可以使用缓冲流（如 BufferedReader 和 BufferedWriter）来包装基础流，减少系统调用的次数。</p>
+<h1 id="Java-NIO？"><a href="#Java-NIO？" class="headerlink" title="Java NIO？"></a>Java NIO？</h1><h2 id="问题：什么是Java-NIO？"><a href="#问题：什么是Java-NIO？" class="headerlink" title="问题：什么是Java NIO？"></a>问题：什么是Java NIO？</h2><p><strong>回答：</strong><br>Java NIO (New I&#x2F;O) 是一种非阻塞的 I&#x2F;O 操作模型，旨在提高高并发应用程序的性能。NIO 通过 Channels 和 Buffers 进行数据操作，并使用 Selectors 来管理多个通道，以实现高效的多路复用。与传统的阻塞 I&#x2F;O 不同，NIO 允许一个线程管理多个输入输出通道，减少线程数量和上下文切换的开销。</p>
+<p><strong>主要组件：</strong></p>
+<ol>
+<li><strong>Channels</strong>：数据传输的通道，如 FileChannel, DatagramChannel, SocketChannel 等。</li>
+<li><strong>Buffers</strong>：存储数据的容器，如 ByteBuffer, CharBuffer 等。</li>
+<li><strong>Selectors</strong>：用于监控多个通道的状态，以实现非阻塞 I&#x2F;O。</li>
+</ol>
+<p><strong>代码示例：</strong><br>下面是一个使用 NIO 实现的简单服务器，接受客户端连接并读取数据：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.InetSocketAddress;</span><br><span class="line"><span class="keyword">import</span> java.nio.ByteBuffer;</span><br><span class="line"><span class="keyword">import</span> java.nio.channels.SelectionKey;</span><br><span class="line"><span class="keyword">import</span> java.nio.channels.Selector;</span><br><span class="line"><span class="keyword">import</span> java.nio.channels.ServerSocketChannel;</span><br><span class="line"><span class="keyword">import</span> java.nio.channels.SocketChannel;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">NioServer</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">Selector</span> <span class="variable">selector</span> <span class="operator">=</span> Selector.open();</span><br><span class="line">        <span class="type">ServerSocketChannel</span> <span class="variable">serverSocketChannel</span> <span class="operator">=</span> ServerSocketChannel.open();</span><br><span class="line">        serverSocketChannel.bind(<span class="keyword">new</span> <span class="title class_">InetSocketAddress</span>(<span class="number">8080</span>));</span><br><span class="line">        serverSocketChannel.configureBlocking(<span class="literal">false</span>);</span><br><span class="line">        serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">            selector.select();</span><br><span class="line">            Set&lt;SelectionKey&gt; selectionKeys = selector.selectedKeys();</span><br><span class="line">            Iterator&lt;SelectionKey&gt; iteratro = selectionKeys.iterator();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(iterator.hasNext()) &#123;</span><br><span class="line">                <span class="type">SelectionKey</span> <span class="variable">key</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">                iterator.remove();</span><br><span class="line">                <span class="keyword">if</span>(key.isAcceptable()) &#123;</span><br><span class="line">                    <span class="type">SeverSocketChannel</span> <span class="variable">server</span> <span class="operator">=</span> (ServerSocketChannel) key.channel();</span><br><span class="line">                    <span class="type">SocketChannel</span> <span class="variable">client</span> <span class="operator">=</span> server.accept();</span><br><span class="line">                    client.configureBloking(<span class="literal">false</span>);</span><br><span class="line">                    client.register(selector, SelectionKey.OP_READ);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span>(key.isReadable()) &#123;</span><br><span class="line">                    <span class="type">SocketChannel</span> <span class="variable">client</span> <span class="operator">=</span> (SocketChannel) key.channel();</span><br><span class="line">                    <span class="type">ByteBuffer</span> <span class="variable">buffer</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">256</span>);</span><br><span class="line">                    client.read(buffer);</span><br><span class="line">                    <span class="type">String</span> <span class="variable">message</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(buffer.array()).trim();</span><br><span class="line">                    System.out.println(<span class="string">&quot;Received message: &quot;</span> + message);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>优化建议：</strong></p>
+<ol>
+<li>确保适当的线程管理以避免单线程瓶颈。</li>
+<li>使用合适的Buffer大小以提高性能。</li>
+<li>在生产环境中，需处理更多异常和错误情况。</li>
+</ol>
+<h1 id="反射-1-？"><a href="#反射-1-？" class="headerlink" title="反射(1)？"></a>反射(1)？</h1><h2 id="问题：什么是Java反射？它的用途是什么？"><a href="#问题：什么是Java反射？它的用途是什么？" class="headerlink" title="问题：什么是Java反射？它的用途是什么？"></a>问题：什么是Java反射？它的用途是什么？</h2><p><strong>回答：</strong><br>Java 反射（Reflection）是Java语言的一种特性，允许程序在运行时动态地获取类的相关信息并操作对象。这种机制在开发过程中非常有用，尤其是在框架和工具的开发中。</p>
+<p><strong>主要用途：</strong></p>
+<ol>
+<li><strong>动态获取类信息</strong>：可以在运行时获取类的名称、修饰符、超类、接口等。</li>
+<li><strong>动态调用方法</strong>：能够在运行时调用类的方法，即使这些方法在编译时是未知的。</li>
+<li><strong>动态访问字段</strong>：可以在运行时获取或修改类的字段值。</li>
+<li><strong>创建对象</strong>：可以在运行时实例化类的对象，即使这个类在编译时是未知的。</li>
+<li><strong>代码分析和调试</strong>：可以在运行时分析代码行为，对于开发调试工具非常有帮助。</li>
+</ol>
+<p><strong>代码示例：</strong><br>下面的代码展示了如何使用反射获取类的信息并调用其方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ReflectionExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class&lt;?&gt; clazz = Class.forName(<span class="string">&quot;com.example.MyClass&quot;</span>);</span><br><span class="line">            Method[] methods = clazz.getDeclaredMethods();</span><br><span class="line">            <span class="keyword">for</span> (Method method : methods) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;Method: &quot;</span> + method.getName());</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="type">Object</span> <span class="variable">instance</span> <span class="operator">=</span> clazz.getDeclaredConstructor().newInstance();</span><br><span class="line"></span><br><span class="line">            <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> clazz.getDeclaredMethod(<span class="string">&quot;myMethod&quot;</span>, String.class);</span><br><span class="line">            method.setAccessible(<span class="literal">true</span>);</span><br><span class="line">            method.invoke(instance, <span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span>(Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>优化建议：</strong></p>
+<ol>
+<li><strong>安全性</strong>：在使用反射时，需注意安全问题，例如权限访问控制。</li>
+<li><strong>性能</strong>：反射操作相对较慢，应尽量避免在性能关键的代码中频繁使用。</li>
+<li><strong>异常处理</strong>：反射可能会抛出多种异常，如 <code>ClassNotFoundException</code>、<code>NoSuchMethodException</code> 等，需做好相应的异常处理。</li>
+</ol>
+<h1 id="代理模式看反射？"><a href="#代理模式看反射？" class="headerlink" title="代理模式看反射？"></a>代理模式看反射？</h1><h2 id="问题：什么是代理模式？如何使用反射实现代理模式？"><a href="#问题：什么是代理模式？如何使用反射实现代理模式？" class="headerlink" title="问题：什么是代理模式？如何使用反射实现代理模式？"></a>问题：什么是代理模式？如何使用反射实现代理模式？</h2><p><strong>回答：</strong><br>代理模式（Proxy Pattern）是一种结构型设计模式，通过为对象提供一个代理以控制对这个对象的访问。代理模式通常用于延迟加载、访问控制、日志记录等场景。</p>
+<p><strong>主要类型：</strong></p>
+<ol>
+<li><strong>静态代理</strong>：代理类在编译时生成，并实现与目标对象相同的接口。</li>
+<li><strong>动态代理</strong>：代理类在运行时动态生成，不需要提前实现接口。</li>
+</ol>
+<p><strong>静态代理示例：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">request</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RealService</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">request</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;RealService: Handling request.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ProxyService</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> RealService realService;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ProxyService</span><span class="params">(RealService realService)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.realService = realService;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">request</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ProxyService: Logging before request.&quot;</span>);</span><br><span class="line">        realService.request();</span><br><span class="line">        System.out.println(<span class="string">&quot;ProxyService: Logging after request.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StaticProxyExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">RealService</span> <span class="variable">realService</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RealService</span>();</span><br><span class="line">        <span class="type">ProxyService</span> <span class="variable">proxy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ProxyService</span>(realService);</span><br><span class="line">        proxy.request();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>动态代理与反射：</strong><br>使用Java反射和动态代理（<code>java.lang.reflect.Proxy</code>）可以在运行时动态创建代理对象。</p>
+<p><strong>动态代理示例：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">request</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RealService</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">request</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;RealService: Handling request.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DynamicProxyHandler</span> <span class="keyword">implements</span> <span class="title class_">InvocationHandler</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Object target;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DynamicProxyHandler</span><span class="params">(Object target)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;DynamicProxy: Logging before request.&quot;</span>);</span><br><span class="line">        <span class="type">Object</span> <span class="variable">result</span> <span class="operator">=</span> method.invoke(target, args);</span><br><span class="line">        System.out.println(<span class="string">&quot;DynamicProxy: Logging after request.&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DynamicProxyExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">RealService</span> <span class="variable">realService</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RealService</span>();</span><br><span class="line">        <span class="type">Service</span> <span class="variable">proxyInstance</span> <span class="operator">=</span> (Service) Proxy.<span class="keyword">new</span> <span class="title class_">ProxyInstance</span>(</span><br><span class="line">            realService.getClass().getClassLoader(),</span><br><span class="line">            realService.getClass().getInterfaces(),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">DynamicProxyHandler</span>(realService)</span><br><span class="line">        );</span><br><span class="line">        proxyInstance.request();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>优化建议：</strong></p>
+<ol>
+<li><strong>使用合适的代理类型</strong>：静态代理适用于简单的代理场景，动态代理则适用于更复杂和通用的代理需求。</li>
+<li><strong>性能考虑</strong>：动态代理由于使用反射，性能上可能不如静态代理，但提供了更大的灵活性。</li>
+<li><strong>安全性</strong>：确保代理类和被代理类之间的权限管理，以避免不必要的安全问题。</li>
+</ol>
+<h1 id="泛型？"><a href="#泛型？" class="headerlink" title="泛型？"></a>泛型？</h1><h2 id="问题：什么是Java泛型？它的用途是什么？"><a href="#问题：什么是Java泛型？它的用途是什么？" class="headerlink" title="问题：什么是Java泛型？它的用途是什么？"></a>问题：什么是Java泛型？它的用途是什么？</h2><p><strong>回答：</strong><br>Java泛型（Generics）是一种在编译时提供类型安全的机制，使得类、接口和方法可以操作特定类型的对象，而不必指定具体的类型。泛型通过类型参数化来减少代码重复，提高代码的重用性和可读性。</p>
+<p><strong>主要用途：</strong></p>
+<ol>
+<li><strong>类型安全</strong>：在编译时检查类型，防止类型转换错误。</li>
+<li><strong>代码重用</strong>：通过泛型，可以编写通用的类、接口和方法，减少代码重复。</li>
+<li><strong>提高可读性</strong>：使代码更加清晰和易读，因为类型信息在使用泛型时更加显式。</li>
+</ol>
+<p><strong>基本使用：</strong></p>
+<ol>
+<li><p><strong>泛型类</strong>：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Box</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">private</span> T content;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setContent</span><span class="params">(T content)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.content = content;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> T <span class="title function_">getContent</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> content;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        Box&lt;String&gt; stringBox = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line">        stringBox.setContent(<span class="string">&quot;Hello Generics&quot;</span>);</span><br><span class="line">        System.out.println(stringBox.getContent());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>泛型方法</strong>：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GenericMethodExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title function_">printArray</span><span class="params">(T[] array)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (T element : array) &#123;</span><br><span class="line">            System.out.println(element + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        Integer[] intArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">        String[] strArray = &#123;<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>&#125;;</span><br><span class="line">        printArray(intArray);</span><br><span class="line">        printArray(strArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>泛型接口</strong>：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">GenericInterface</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">doSomething</span><span class="params">(T t)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GenericInterfaceImpl</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">GenericInterace</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doSomething</span><span class="params">(T t)</span> &#123;</span><br><span class="line">        System.out.println(t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        GenericInterface&lt;String&gt; generic = <span class="keyword">new</span> <span class="title class_">GenericInterfaceImple</span>&lt;&gt;();</span><br><span class="line">        generic.doSomething(<span class="string">&quot;Hello Generics Interface&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>高级使用：</strong></p>
+<ol>
+<li><strong>通配符</strong>：<code>?</code> 表示未知类型，可以进一步限制上限或下限。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printList</span><span class="params">(List&lt;?&gt; list)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (Object elem : list) &#123;</span><br><span class="line">        System.out.println(elem + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><strong>类型边界</strong>：使用 <code>extends</code> 和 <code>super</code> 来限制类型参数的上下界。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Number</span>&gt; <span class="keyword">void</span> <span class="title function_">printNumber</span><span class="params">(T number)</span> &#123;</span><br><span class="line">    System.out.println(number);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>优化建议：</strong></p>
+<ol>
+<li><strong>避免使用原始类型</strong>：总是使用泛型类型，以保持类型安全。</li>
+<li><strong>谨慎使用通配符</strong>：通配符使代码更加灵活，但应根据实际需求使用。</li>
+<li><strong>理解类型擦除</strong>：泛型在运行时会被擦除为其上界，了解这一机制有助于避免潜在的问题。</li>
+</ol>
+<h1 id="反射与泛型？"><a href="#反射与泛型？" class="headerlink" title="反射与泛型？"></a>反射与泛型？</h1><h2 id="问题：如何在Java中使用反射与泛型？"><a href="#问题：如何在Java中使用反射与泛型？" class="headerlink" title="问题：如何在Java中使用反射与泛型？"></a>问题：如何在Java中使用反射与泛型？</h2><p><strong>回答：</strong><br>Java中的反射和泛型结合使用，可以在运行时动态地获取泛型类型信息并进行操作。这种结合通常用于框架开发和库设计中，以提供更灵活和动态的功能。</p>
+<p><strong>获取泛型类型信息：</strong><br>在Java中，泛型类型在编译时会被擦除（Type Erasure），在运行时无法直接获取泛型参数的具体类型。但是，通过反射，可以获取泛型的相关信息。</p>
+<p><strong>代码示例：</strong><br>下面是一个使用反射获取泛型类型信息的例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.ParameterizedType;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Type;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GenericTypeReflection</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, Integer&gt; mapField;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main&lt;String[] args&gt; &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class&lt;GenericTypeReflection&gt; clazz = GenericTypeReflection.class;</span><br><span class="line">            <span class="type">Field</span> <span class="variable">field</span> <span class="operator">=</span> clazz.getDeclaredField(<span class="string">&quot;mapField&quot;</span>);</span><br><span class="line">            <span class="type">Type</span> <span class="variable">genericFieldType</span> <span class="operator">=</span> field.getGenericType();</span><br><span class="line">            <span class="keyword">if</span> (genericFieldType <span class="keyword">instanceof</span> ParameterizedType) &#123;</span><br><span class="line">                <span class="type">ParameterizedType</span> <span class="variable">parameterizedType</span> <span class="operator">=</span> (ParameterizedType) genericFieldType;</span><br><span class="line">                Type[] fieldArgTypes = parameterizedType.getActualTypeArguments();</span><br><span class="line">                <span class="keyword">for</span> (Type type: fieldArgTypes) &#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;Field Arg Type: &quot;</span> + type);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span>(NoSuchFieldException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>输出结果：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Field Arg Type: class java.lang.String</span><br><span class="line">Field Arg Type: class java.lang.Integer</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用泛型类的反射：</strong><br>通过反射，可以在运行时获取泛型类的信息，并操作这些类。</p>
+<p><strong>泛型类示例：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GenericClassReflection</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 创建一个ArrayList对象</span></span><br><span class="line">            List&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">            list.add(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 获取ArrayList的Class对象</span></span><br><span class="line">            Class&lt;?&gt; clazz = list.getClass();</span><br><span class="line">            <span class="comment">// 获取add方法</span></span><br><span class="line">            <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> clazz.getDeclaredMethod(<span class="string">&quot;add&quot;</span>, Object.class);</span><br><span class="line">            <span class="comment">// 调用add方法，添加一个Integer类型的元素</span></span><br><span class="line">            method.invoke(list, <span class="number">123</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 输出ArrayList的内容</span></span><br><span class="line">            <span class="keyword">for</span> (Object obj : list) &#123;</span><br><span class="line">                System.out.println(obj);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>输出结果：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hello</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+<p><strong>优化建议：</strong></p>
+<ol>
+<li><strong>类型检查</strong>：在使用反射和泛型时，确保进行适当的类型检查，以避免运行时类型错误。</li>
+<li><strong>性能考虑</strong>：反射操作的性能较低，应尽量避免在性能关键的代码中频繁使用。</li>
+<li><strong>安全性</strong>：在操作反射时，注意权限控制和安全问题。</li>
+</ol>
+<h1 id="Java异常？"><a href="#Java异常？" class="headerlink" title="Java异常？"></a>Java异常？</h1><h2 id="问题：什么是Java异常？如何进行异常处理？"><a href="#问题：什么是Java异常？如何进行异常处理？" class="headerlink" title="问题：什么是Java异常？如何进行异常处理？"></a>问题：什么是Java异常？如何进行异常处理？</h2><p><strong>回答：</strong><br>Java异常是程序在运行过程中发生的不正常情况，可能导致程序的终止。Java提供了异常处理机制，使得程序可以在运行时捕获和处理异常，保证程序的健壮性和稳定性。</p>
+<p><strong>主要异常类型：</strong></p>
+<ol>
+<li>**<code>Throwable</code>**：所有异常的超类，包括<code>Error</code>和<code>Exception</code>。</li>
+<li>**<code>Error</code>**：严重错误，如<code>OutOfMemoryError</code>，一般不由程序处理。</li>
+<li>**<code>Exception</code>**：程序中可以捕获和处理的异常。<ul>
+<li>**<code>RuntimeException</code>**：运行时异常，如<code>NullPointerException</code>，通常由编程错误引起。</li>
+<li><strong>非运行时异常</strong>：如<code>IOException</code>，需要显式处理。</li>
+</ul>
+</li>
+</ol>
+<p><strong>基本语法：</strong></p>
+<ol>
+<li><strong>try-catch-finally</strong>：用于捕获和处理异常。</li>
+<li><strong>throw</strong>：用于显式抛出异常。</li>
+<li><strong>throws</strong>：用于声明方法可能抛出的异常。</li>
+</ol>
+<p><strong>代码示例：</strong><br>下面是一个基本的异常处理示例，展示了如何捕获和处理异常：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExceptionHandlingExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> divide(<span class="number">10</span>, <span class="number">0</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;Result: &quot;</span> + result);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ArithmeticException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Caught an ArithmeticException: &quot;</span> + e.getMessage());</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;This block is always executed.&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">divide</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a / b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出结果：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Caught an ArithmeticException: / by zero</span><br><span class="line">This block is always executed.</span><br></pre></td></tr></table></figure>
+
+<p><strong>自定义异常：</strong><br>可以定义自己的异常类，以便在特定的业务逻辑中使用。</p>
+<p><strong>自定义异常示例：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">CustomException</span> <span class="keyword">extends</span> <span class="title class_">Exception</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">CustomException</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CustomExceptionExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            validateAge(<span class="number">15</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (CustomException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Caught CustomException: &quot;</span> + e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">validateAge</span><span class="params">(<span class="type">int</span> age)</span> <span class="keyword">throws</span> CustomException &#123;</span><br><span class="line">        <span class="keyword">if</span> (age &lt; <span class="number">18</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">CustomException</span>(<span class="string">&quot;Age must be at least 18.&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>异常的层次结构：</strong></p>
+<ul>
+<li><strong><code>Throwable</code></strong><ul>
+<li><strong><code>Error</code></strong></li>
+<li><strong><code>Exception</code></strong><ul>
+<li><strong><code>RuntimeException</code></strong></li>
+<li><strong>非运行时异常</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>常见异常分类：</strong></p>
+<ol>
+<li><strong>检查性异常（Checked Exception）</strong>：必须在编译时处理，如<code>IOException</code>。</li>
+<li><strong>非检查性异常（Unchecked Exception）</strong>：运行时异常，如<code>NullPointerException</code>。</li>
+</ol>
+<p><strong>优化建议：</strong></p>
+<ol>
+<li><strong>只捕获需要处理的异常</strong>：避免使用宽泛的异常捕获，如<code>catch (Exception e)</code>，以提高代码的可读性和维护性。</li>
+<li><strong>适当使用finally</strong>：确保资源释放等操作始终执行，如关闭文件流或数据库连接。</li>
+<li><strong>自定义异常信息</strong>：提供有意义的异常信息，有助于调试和维护。</li>
+</ol>
+<h1 id="谈谈对java多态的理解？"><a href="#谈谈对java多态的理解？" class="headerlink" title="谈谈对java多态的理解？"></a>谈谈对java多态的理解？</h1><h2 id="问题：谈谈你对Java多态性的理解？"><a href="#问题：谈谈你对Java多态性的理解？" class="headerlink" title="问题：谈谈你对Java多态性的理解？"></a>问题：谈谈你对Java多态性的理解？</h2><p><strong>回答：</strong><br>Java多态性是面向对象编程的核心特性之一，指的是同一操作作用于不同的对象，可以产生不同的行为方式。多态性通过方法重写（Override）和方法重载（Overload）实现，使得同一方法在不同对象上有不同的表现。</p>
+<p><strong>多态的三个必要条件：</strong></p>
+<ol>
+<li><strong>继承</strong>：子类继承父类的方法。</li>
+<li><strong>重写</strong>：子类重写父类的方法。</li>
+<li><strong>父类引用指向子类对象</strong>：父类的引用变量可以指向子类对象。</li>
+</ol>
+<p><strong>什么是多态：</strong><br>多态允许同一消息可以根据发送对象的不同而采取多种不同的行为方式，即消息的多种解释和执行方式（动态绑定）。</p>
+<p><strong>多态的好处：</strong></p>
+<ol>
+<li><strong>可替换性</strong>：多态使得已存在的代码具有可替换性。例如，多态代码在处理Circle类时，对其他任何圆形几何体类，如圆环，也同样工作。</li>
+<li><strong>可扩充性</strong>：多态代码具有可扩充性，增加新的子类不会影响已有类的多态性。</li>
+<li><strong>接口性</strong>：多态通过方法签名，向子类提供了一个共同接口。</li>
+<li><strong>灵活性</strong>：多态使得应用程序可以灵活地进行操作，提高了使用效率。</li>
+<li><strong>简化性</strong>：多态简化了应用程序的软件结构，使得代码更易于理解和维护。</li>
+</ol>
+<p><strong>实现方式：</strong></p>
+<ol>
+<li><strong>接口实现</strong>：通过实现接口，实现多态。</li>
+<li><strong>继承父类进行方法重写</strong>：通过继承父类并重写其方法，实现多态。</li>
+<li><strong>同一个类中进行方法重载</strong>：通过在同一类中定义多个方法的重载，实现多态。</li>
+</ol>
+<p><strong>代码示例：</strong><br>下面是一个基本的多态示例，展示了如何通过方法重写实现多态：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Animal makes a sound&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dog barks&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Cat meows&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PolymorphismExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">myDog</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">myCat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">        </span><br><span class="line">        myDog.makeSound();  <span class="comment">// 输出: Dog barks</span></span><br><span class="line">        myCat.makeSound();  <span class="comment">// 输出: Cat meows</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>总结：</strong><br>多态性是面向对象编程的重要特性，通过多态性，可以实现更灵活、扩展性更好和更易维护的代码结构。多态性主要通过方法重写和接口实现，并结合父类引用指向子类对象来实现。</p>
+<h1 id="谈谈你所了解的设计模式？"><a href="#谈谈你所了解的设计模式？" class="headerlink" title="谈谈你所了解的设计模式？"></a>谈谈你所了解的设计模式？</h1><h2 id="问题：谈谈你所了解的设计模式？"><a href="#问题：谈谈你所了解的设计模式？" class="headerlink" title="问题：谈谈你所了解的设计模式？"></a>问题：谈谈你所了解的设计模式？</h2><p><strong>回答：</strong><br>设计模式是软件开发中针对特定问题的通用解决方案。它们是被前人总结出来的可复用的设计经验，帮助开发者更高效地解决问题。Java中有23种经典设计模式，通常分为三大类：创建型模式、结构型模式和行为型模式。</p>
+<h3 id="创建型模式（5个）"><a href="#创建型模式（5个）" class="headerlink" title="创建型模式（5个）"></a>创建型模式（5个）</h3><p>描述如何创建对象：</p>
+<ol>
+<li><strong>单例模式（Singleton）</strong>：确保一个类只有一个实例，并提供全局访问点。</li>
+<li><strong>原型模式（Prototype）</strong>：通过复制现有实例来创建新对象，而不是通过实例化类。</li>
+<li><strong>工厂方法模式（Factory Method）</strong>：定义一个接口，用于创建对象，但让子类决定实例化哪一个类。</li>
+<li><strong>抽象工厂模式（Abstract Factory）</strong>：提供一个接口，用于创建相关或依赖对象的家族，而不需要明确指定具体类。</li>
+<li><strong>建造者模式（Builder）</strong>：将一个复杂对象的构建过程分离，使得同样的构建过程可以创建不同的表示。</li>
+</ol>
+<h3 id="结构型模式（7个）"><a href="#结构型模式（7个）" class="headerlink" title="结构型模式（7个）"></a>结构型模式（7个）</h3><p>描述如何将类或对象按某种布局组成更大的结构：</p>
+<ol>
+<li><strong>适配器模式（Adapter）</strong>：将一个类的接口转换为客户希望的另一个接口，使得原本由于接口不兼容而不能一起工作的类可以一起工作。</li>
+<li><strong>桥接模式（Bridge）</strong>：将抽象部分与实现部分分离，使它们都可以独立变化。</li>
+<li><strong>组合模式（Composite）</strong>：将对象组合成树形结构以表示“部分-整体”的层次结构。</li>
+<li><strong>装饰模式（Decorator）</strong>：动态地给对象添加一些职责，即增加对象功能。</li>
+<li><strong>外观模式（Facade）</strong>：为子系统中的一组接口提供一个一致的界面，定义一个高层接口。</li>
+<li><strong>享元模式（Flyweight）</strong>：通过共享技术来有效地支持大量细粒度的对象。</li>
+<li><strong>代理模式（Proxy）</strong>：为其他对象提供一种代理以控制对这个对象的访问。</li>
+</ol>
+<h3 id="行为型模式（11个）"><a href="#行为型模式（11个）" class="headerlink" title="行为型模式（11个）"></a>行为型模式（11个）</h3><p>描述类或对象之间怎样交互及职责分配：</p>
+<ol>
+<li><strong>责任链模式（Chain of Responsibility）</strong>：为请求创建一条接收者对象的链，沿着这条链传递请求，直到有一个对象处理它。</li>
+<li><strong>命令模式（Command）</strong>：将请求封装成对象，以便使用不同的请求、队列或日志请求来参数化其他对象。</li>
+<li><strong>解释器模式（Interpreter）</strong>：为语言创建解释器，为语言中的每一个符号创建一个类，解释器模式使用这些类来解释语言的句子。</li>
+<li><strong>迭代器模式（Iterator）</strong>：提供一种方法顺序访问一个聚合对象中的各个元素，而又不暴露该对象的内部表示。</li>
+<li><strong>中介者模式（Mediator）</strong>：用一个中介对象来封装一系列对象的交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散。</li>
+<li><strong>备忘录模式（Memento）</strong>：在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，以便以后恢复它。</li>
+<li><strong>观察者模式（Observer）</strong>：定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。</li>
+<li><strong>状态模式（State）</strong>：允许对象在其内部状态发生改变时改变其行为，对象看起来好像修改了它的类。</li>
+<li><strong>策略模式（Strategy）</strong>：定义一系列算法，并将每一个算法封装起来，使它们可以互换。</li>
+<li><strong>模板方法模式（Template Method）</strong>：定义一个操作中的算法骨架，而将一些步骤延迟到子类中，使得子类可以不改变算法的结构即可重定义该算法的某些步骤。</li>
+<li><strong>访问者模式（Visitor）</strong>：表示一个作用于某对象结构中的各元素的操作，使得可以在不改变各元素的类的前提下定义作用于这些元素的新操作。</li>
+</ol>
+<p><strong>动态代理的原理及实现：</strong></p>
+<ul>
+<li><strong>InvocationHandler接口</strong>：动态代理类需要实现该接口。</li>
+<li>**Proxy.newProxyInstance()**：用于创建动态代理对象。</li>
+<li><strong>Retrofit</strong>：通过动态代理，将定义的请求接口映射为实际的网络请求。</li>
+</ul>
+<h1 id="静态属性与静态方法？"><a href="#静态属性与静态方法？" class="headerlink" title="静态属性与静态方法？"></a>静态属性与静态方法？</h1><h2 id="问题：静态属性和静态方法是否可以被继承？是否可以被重写？以及原因？"><a href="#问题：静态属性和静态方法是否可以被继承？是否可以被重写？以及原因？" class="headerlink" title="问题：静态属性和静态方法是否可以被继承？是否可以被重写？以及原因？"></a>问题：静态属性和静态方法是否可以被继承？是否可以被重写？以及原因？</h2><p><strong>回答：</strong><br>在Java中，静态属性和静态方法是属于类的，而不是属于实例的。它们可以被子类继承，但是不能被重写，只能被隐藏。</p>
+<p><strong>原因如下：</strong></p>
+<ol>
+<li><p><strong>静态方法和属性属于类：</strong><br>静态方法和属性是与类相关联的，而不是与实例相关联。调用时使用类名直接调用，而不是通过对象引用。如果子类定义了与父类同名的静态方法或属性，父类的静态方法或属性在子类中将被隐藏，而不是被重写。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">class</span> <span class="title class_">Parent</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">staticMethod</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Parent static method&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Child</span> <span class="keyword">extends</span> <span class="title class_">Parent</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">staticMethod</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Child static method&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        Parent.staticMethod();  <span class="comment">// 输出: Parent static method</span></span><br><span class="line">        Child.staticMethod();   <span class="comment">// 输出: Child static method</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>多态性依赖于方法重写：</strong><br>多态性的实现依赖于方法的重写和接口的实现，而静态方法由于是与类相关的，因此不能被重写。重写的本质是动态绑定，而静态方法是静态绑定的，即在编译期决定调用哪个方法。因此，静态方法不能实现多态。</p>
+</li>
+<li><p><strong>隐藏 vs 重写：</strong><br>静态方法和静态属性的“隐藏”是指在子类中定义与父类同名的静态方法或属性，这样在子类中使用类名调用时，将调用子类的静态方法或属性，但这并不是重写。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">class</span> <span class="title class_">Parent</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">String</span> <span class="variable">staticField</span> <span class="operator">=</span> <span class="string">&quot;Parent static field&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Child</span> <span class="keyword">extends</span> <span class="title class_">Parent</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">String</span> <span class="variable">staticField</span> <span class="operator">=</span> <span class="string">&quot;Child static field&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(Parent.staticField);  <span class="comment">// 输出: Parent static field</span></span><br><span class="line">        System.out.println(Child.staticField);   <span class="comment">// 输出: Child static field</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>结论：</strong><br>静态属性和静态方法是类级别的成员，属于类而不是实例。它们可以被继承，但在子类中定义同名的静态属性或静态方法时，将隐藏父类的同名成员，而不是重写。因此，静态方法不能实现多态，而实例方法可以通过继承和重写实现多态。</p>
+<h1 id="java集合框架？"><a href="#java集合框架？" class="headerlink" title="java集合框架？"></a>java集合框架？</h1><h2 id="问题：Java集合框架，List、Map、Set都有哪些具体的实现类，区别是什么？"><a href="#问题：Java集合框架，List、Map、Set都有哪些具体的实现类，区别是什么？" class="headerlink" title="问题：Java集合框架，List、Map、Set都有哪些具体的实现类，区别是什么？"></a>问题：Java集合框架，List、Map、Set都有哪些具体的实现类，区别是什么？</h2><p><strong>回答：</strong><br>Java集合框架提供了一套标准的接口和类，用于存储和操作数据。集合主要分为三类：List、Set、Map，每个接口有不同的实现类，适用于不同的场景。</p>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p><strong>特点：</strong></p>
+<ul>
+<li>有序集合，允许重复元素。</li>
+<li>通过索引访问元素。</li>
+</ul>
+<p><strong>实现类：</strong></p>
+<ol>
+<li><strong>ArrayList</strong>：基于动态数组，查询速度快，增删速度慢，适用于频繁读取数据的场景。</li>
+<li><strong>LinkedList</strong>：基于双向链表，增删速度快，查询速度慢，适用于频繁插入、删除数据的场景。</li>
+<li><strong>Vector</strong>：类似ArrayList，但线程安全，性能较低，已较少使用。</li>
+</ol>
+<p><strong>使用场景：</strong></p>
+<ul>
+<li>ArrayList：适用于读操作多的场景，如存储用户信息列表。</li>
+<li>LinkedList：适用于增删操作多的场景，如队列或栈的实现。</li>
+<li>Vector：在需要线程安全的情况下使用，但通常推荐使用 <code>Collections.synchronizedList(new ArrayList&lt;&gt;())</code> 来代替。</li>
+</ul>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p><strong>特点：</strong></p>
+<ul>
+<li>无序集合，不允许重复元素。</li>
+</ul>
+<p><strong>实现类：</strong></p>
+<ol>
+<li><strong>HashSet</strong>：基于哈希表实现，插入、删除、查询性能高，适用于快速查找的场景。</li>
+<li><strong>LinkedHashSet</strong>：维护插入顺序，性能略低于HashSet，适用于需要顺序输出的场景。</li>
+<li><strong>TreeSet</strong>：基于红黑树实现，元素有序，适用于需要排序的场景。</li>
+</ol>
+<p><strong>使用场景：</strong></p>
+<ul>
+<li>HashSet：适用于需要快速查找和删除元素的场景，如用户ID集合。</li>
+<li>LinkedHashSet：适用于需要保持插入顺序的场景，如访问日志。</li>
+<li>TreeSet：适用于需要自动排序的场景，如字典序存储的单词列表。</li>
+</ul>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p><strong>特点：</strong></p>
+<ul>
+<li>键值对集合，每个键唯一。</li>
+</ul>
+<p><strong>实现类：</strong></p>
+<ol>
+<li><strong>HashMap</strong>：基于哈希表实现，线程不安全，查询速度快，适用于大多数场景。</li>
+<li><strong>LinkedHashMap</strong>：维护插入顺序，适用于需要顺序输出的场景。</li>
+<li><strong>TreeMap</strong>：基于红黑树实现，键有序，适用于需要排序的场景。</li>
+<li><strong>Hashtable</strong>：类似HashMap，但线程安全，性能较低，已较少使用。</li>
+</ol>
+<p><strong>使用场景：</strong></p>
+<ul>
+<li>HashMap：适用于需要快速查找键值对的场景，如缓存实现。</li>
+<li>LinkedHashMap：适用于需要按插入顺序遍历键值对的场景，如LRU缓存。</li>
+<li>TreeMap：适用于需要按键排序的场景，如按字母排序的电话号码簿。</li>
+<li>Hashtable：在需要线程安全的情况下使用，但通常推荐使用 <code>ConcurrentHashMap</code> 来代替。</li>
+</ul>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>Java集合框架提供了丰富的接口和实现类，适用于不同的数据存储和操作需求。选择合适的集合类可以提高程序的性能和可维护性。</p>
+<h1 id="泛型基本问题？"><a href="#泛型基本问题？" class="headerlink" title="泛型基本问题？"></a>泛型基本问题？</h1><h2 id="问题：简单介绍一下Java中的泛型，泛型擦除以及相关的概念、解析与分派？"><a href="#问题：简单介绍一下Java中的泛型，泛型擦除以及相关的概念、解析与分派？" class="headerlink" title="问题：简单介绍一下Java中的泛型，泛型擦除以及相关的概念、解析与分派？"></a>问题：简单介绍一下Java中的泛型，泛型擦除以及相关的概念、解析与分派？</h2><p><strong>回答：</strong><br>泛型是Java SE 5引入的一项特性，旨在提高代码的安全性和重用性。泛型的本质是参数化类型，即允许在定义类、接口和方法时使用类型参数，从而使代码在编译时进行类型检查。</p>
+<p><strong>泛型的好处：</strong></p>
+<ol>
+<li><strong>类型安全</strong>：在编译时进行类型检查，避免了运行时的类型转换错误。</li>
+<li><strong>提高代码重用性</strong>：泛型使代码更加通用，减少重复代码。</li>
+</ol>
+<p><strong>泛型的基本概念：</strong></p>
+<ol>
+<li><strong>类型参数</strong>：泛型允许定义带有类型参数的类、接口和方法，如<code>&lt;T&gt;</code>。</li>
+<li><strong>类型参数可以是类类型（包括自定义类），不能是简单类型</strong>：如<code>List&lt;Integer&gt;</code>是合法的，但<code>List&lt;int&gt;</code>是不合法的。</li>
+<li><strong>同一泛型可以对应多个不同的具体类型</strong>：如<code>List&lt;String&gt;</code>和<code>List&lt;Integer&gt;</code>。</li>
+<li><strong>泛型的类型参数可以有多个</strong>：如<code>Map&lt;K, V&gt;</code>。</li>
+<li><strong>类型参数可以使用extends关键字设置上界</strong>：如<code>&lt;T extends Number&gt;</code>表示类型参数必须是Number的子类。</li>
+<li><strong>通配符类型</strong>：使用<code>?</code>表示未知类型，可以使用extends和super关键字进行上下界约束。</li>
+</ol>
+<p><strong>泛型擦除：</strong><br>泛型信息只存在于代码编译阶段，在进入JVM之前，所有的泛型信息都会被擦除。在类型擦除过程中，如果类型参数没有指定上界，则会被替换为Object；如果指定了上界，则替换为对应的上界类型。这一过程称为类型擦除。</p>
+<p><strong>泛型擦除的影响：</strong></p>
+<ol>
+<li><strong>先检查，后擦除</strong>：在编译时进行类型检查，然后进行类型擦除。</li>
+<li><strong>自动类型转换</strong>：在擦除后进行必要的类型转换。</li>
+<li><strong>类型擦除与多态的冲突</strong>：因为类型擦除后类型信息丢失，可能会导致多态性问题。</li>
+<li><strong>运行时类型查询</strong>：无法在运行时查询泛型类型。</li>
+<li><strong>数组不支持泛型</strong>：泛型数组在Java中是不合法的，因为无法在运行时检查类型安全性。</li>
+</ol>
+<p><strong>代码示例：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GenericExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个泛型列表，指定类型为String</span></span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;World&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 编译时进行类型检查，确保类型安全</span></span><br><span class="line">        <span class="keyword">for</span> (String str : list) &#123;</span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>总结：</strong><br>Java中的泛型通过参数化类型提供了类型安全和代码重用性。泛型擦除使得泛型信息在运行时丢失，因此需要在编译时进行类型检查和转换。理解泛型和类型擦除对于编写安全和高效的代码至关重要。</p>
+<h1 id="反射基本问题？"><a href="#反射基本问题？" class="headerlink" title="反射基本问题？"></a>反射基本问题？</h1><h2 id="问题：说说你对Java反射的理解？"><a href="#问题：说说你对Java反射的理解？" class="headerlink" title="问题：说说你对Java反射的理解？"></a>问题：说说你对Java反射的理解？</h2><p><strong>回答：</strong><br>Java中的反射是指程序在运行时能够获取到自身的信息，并且可以操作类或对象的内部属性和方法。反射是Java语言的一个强大特性，允许程序在运行时检查和操作自身结构。</p>
+<p><strong>获取类字节码的方法：</strong></p>
+<ol>
+<li>**Class.forName(className)**：通过类名获取Class对象。</li>
+<li><strong>类名.class</strong>：直接通过类名获取Class对象。</li>
+<li>**对象.getClass()**：通过对象的实例获取Class对象。</li>
+</ol>
+<p><strong>反射的主要功能：</strong></p>
+<ul>
+<li><strong>在运行时判断任意一个对象所属的类</strong>。</li>
+<li><strong>在运行时构造任意一个类的对象</strong>。</li>
+<li><strong>在运行时判断任意一个类具有的成员变量和方法</strong>（通过反射可以访问私有方法和属性）。</li>
+<li><strong>在运行时调用任意一个对象的方法</strong>。</li>
+</ul>
+<p><strong>反射的核心：</strong><br>反射的核心是JVM在运行时动态加载类、调用方法&#x2F;访问属性。它需要在写代码的时候知道对象类型，并在运行时操作这些信息。</p>
+<p><strong>反射的重要用途：</strong><br>反射最重要的用途之一是开发各种通用框架。很多框架（如Spring）通过反射来实现依赖注入、动态代理等功能。反射使得框架可以动态地配置和操作对象及其属性和方法，提高了框架的灵活性和可扩展性。</p>
+<p><strong>反射的优缺点：</strong></p>
+<ul>
+<li><strong>优点</strong>：反射使得代码更具灵活性和动态性，能够在运行时进行更多操作。</li>
+<li><strong>缺点</strong>：由于反射会消耗一定的系统资源，因此可能会影响性能。同时，反射可以绕过权限检查，可能会破坏封装性和安全性。</li>
+</ul>
+<p><strong>代码示例：</strong><br>下面是一个使用反射获取类信息和调用方法的例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ReflectionExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 获取Class对象</span></span><br><span class="line">            Class&lt;?&gt; clazz = Class.forName(<span class="string">&quot;java.util.ArrayList&quot;</span>);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 获取所有方法</span></span><br><span class="line">            Method[] methods = clazz.getDeclaredMethods();</span><br><span class="line">            <span class="keyword">for</span> (Method method : methods) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;Method: &quot;</span> + method.getName());</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 实例化对象</span></span><br><span class="line">            <span class="type">Object</span> <span class="variable">instance</span> <span class="operator">=</span> clazz.getDeclaredConstructor().newInstance();</span><br><span class="line">            <span class="type">Method</span> <span class="variable">addMethod</span> <span class="operator">=</span> clazz.getMethod(<span class="string">&quot;add&quot;</span>, Object.class);</span><br><span class="line">            addMethod.invoke(instance, <span class="string">&quot;Hello Reflection&quot;</span>);</span><br><span class="line"></span><br><span class="line">            System.out.println(instance);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结：</strong><br>反射是Java中的强大特性，允许在运行时检查和操作类及对象的内部结构。虽然反射提供了极大的灵活性，但也需要谨慎使用以避免性能问题和安全风险。</p>
+<h1 id="匿名内部类？"><a href="#匿名内部类？" class="headerlink" title="匿名内部类？"></a>匿名内部类？</h1><h2 id="问题：Java的匿名内部类有哪些限制？"><a href="#问题：Java的匿名内部类有哪些限制？" class="headerlink" title="问题：Java的匿名内部类有哪些限制？"></a>问题：Java的匿名内部类有哪些限制？</h2><p><strong>回答：</strong><br>匿名内部类是没有名字的局部内部类，主要用于简化代码，实现回调等功能。它们在定义时直接创建其实例，通常用来简化单个接口或抽象类的实现。</p>
+<p><strong>匿名内部类的概念和用法：</strong></p>
+<ol>
+<li><strong>没有类名</strong>：匿名内部类是在声明和实例化时没有具体类名的内部类。</li>
+<li><strong>实现接口或继承类</strong>：匿名内部类必须实现一个接口或继承一个类，通常用于实现回调接口。</li>
+<li><strong>语法</strong>：使用<code>new</code>关键字直接实例化一个匿名内部类。</li>
+</ol>
+<p><strong>示例：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Greeting</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">greet</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AnonymousClassExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Greeting</span> <span class="variable">greeting</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Greeting</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">greet</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;Hello, world!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        greeting.greet();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>匿名内部类的限制：</strong></p>
+<ol>
+<li><strong>无法定义构造方法</strong>：因为没有类名，匿名内部类不能定义构造方法。</li>
+<li><strong>只能创建一个实例</strong>：匿名内部类是在定义时创建实例，因此只能创建一个实例。</li>
+<li><strong>范围限制</strong>：匿名内部类只能在代码块内使用，通常用于局部变量或方法参数。</li>
+<li><strong>外部变量访问</strong>：匿名内部类只能访问<code>final</code>修饰的外部变量或在Java 8以后的隐式<code>final</code>变量。</li>
+<li><strong>继承和实现限制</strong>：匿名内部类只能继承一个类或实现一个接口，不能多继承。</li>
+</ol>
+<p><strong>编译后的结果：</strong><br>匿名内部类在编译后会生成一个单独的类文件，文件名格式为<code>OuterClass$1.class</code>，其中<code>OuterClass</code>是包含匿名内部类的外部类，<code>1</code>表示匿名内部类在外部类中的位置。</p>
+<p><strong>使用场景：</strong></p>
+<ul>
+<li><strong>事件处理</strong>：常用于图形用户界面（GUI）编程中的事件处理器。</li>
+<li><strong>回调函数</strong>：用于实现简单的回调接口，如线程和定时任务中的回调处理。</li>
+</ul>
+<p><strong>总结：</strong></p>
+<ul>
+<li>匿名内部类简化了代码，使得代码更简洁明了，特别适用于实现单一功能接口或抽象类。</li>
+<li>匿名内部类有其局限性，如无法定义构造方法、只能创建一个实例、以及只能访问<code>final</code>变量。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">JackAAAAA</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/f2c6e9a2.html">http://example.com/posts/f2c6e9a2.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">jackAAAAA's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a><a class="post-meta__tags" href="/tags/%E4%B8%93%E4%B8%9A%E5%9F%BA%E7%A1%80/">专业基础</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/posts/7942b5c7.html" title="LeetCode_2644总结"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">LeetCode_2644总结</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">JackAAAAA</div><div class="author-info__description"> </div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/jackAAAAA"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jackAAAAA" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1143865523@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java-io-1-%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">java-io(1)？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AD%97%E8%8A%82%E4%B8%8E%E5%AD%97%E7%AC%A6"><span class="toc-number">1.1.</span> <span class="toc-text">一、字节与字符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86%EF%BC%88Unicode%EF%BC%89%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">Java 中的字符串处理（Unicode）示例代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E4%B8%8E%E8%A7%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">编码与解码：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81File-%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text">二、File 类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-number">1.2.1.</span> <span class="toc-text">创建文件对象：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E5%88%86%E9%9A%94%E7%AC%A6%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">路径分隔符：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%EF%BC%9A"><span class="toc-number">1.2.3.</span> <span class="toc-text">目录：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">1.2.4.</span> <span class="toc-text">目录操作方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">1.2.5.</span> <span class="toc-text">获取方法：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#java-io-2-%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">java-io(2)？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81IO%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="toc-number">2.1.</span> <span class="toc-text">一、IO的由来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81IO%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">2.2.</span> <span class="toc-text">二、IO的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81IO%E7%9A%84%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB"><span class="toc-number">2.3.</span> <span class="toc-text">三、IO的继承体系</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-NIO%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">Java NIO？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AFJava-NIO%EF%BC%9F"><span class="toc-number">3.1.</span> <span class="toc-text">问题：什么是Java NIO？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84-1-%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">反射(1)？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AFJava%E5%8F%8D%E5%B0%84%EF%BC%9F%E5%AE%83%E7%9A%84%E7%94%A8%E9%80%94%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">4.1.</span> <span class="toc-text">问题：什么是Java反射？它的用途是什么？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9C%8B%E5%8F%8D%E5%B0%84%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">代理模式看反射？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%9F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8F%8D%E5%B0%84%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%9F"><span class="toc-number">5.1.</span> <span class="toc-text">问题：什么是代理模式？如何使用反射实现代理模式？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%EF%BC%9F"><span class="toc-number">6.</span> <span class="toc-text">泛型？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AFJava%E6%B3%9B%E5%9E%8B%EF%BC%9F%E5%AE%83%E7%9A%84%E7%94%A8%E9%80%94%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">6.1.</span> <span class="toc-text">问题：什么是Java泛型？它的用途是什么？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E4%B8%8E%E6%B3%9B%E5%9E%8B%EF%BC%9F"><span class="toc-number">7.</span> <span class="toc-text">反射与泛型？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A6%82%E4%BD%95%E5%9C%A8Java%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8F%8D%E5%B0%84%E4%B8%8E%E6%B3%9B%E5%9E%8B%EF%BC%9F"><span class="toc-number">7.1.</span> <span class="toc-text">问题：如何在Java中使用反射与泛型？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%BC%82%E5%B8%B8%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">Java异常？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AFJava%E5%BC%82%E5%B8%B8%EF%BC%9F%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-number">8.1.</span> <span class="toc-text">问题：什么是Java异常？如何进行异常处理？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B0%88%E8%B0%88%E5%AF%B9java%E5%A4%9A%E6%80%81%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-number">9.</span> <span class="toc-text">谈谈对java多态的理解？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9Java%E5%A4%9A%E6%80%81%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-number">9.1.</span> <span class="toc-text">问题：谈谈你对Java多态性的理解？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B0%88%E8%B0%88%E4%BD%A0%E6%89%80%E4%BA%86%E8%A7%A3%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9F"><span class="toc-number">10.</span> <span class="toc-text">谈谈你所了解的设计模式？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E8%B0%88%E8%B0%88%E4%BD%A0%E6%89%80%E4%BA%86%E8%A7%A3%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9F"><span class="toc-number">10.1.</span> <span class="toc-text">问题：谈谈你所了解的设计模式？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%885%E4%B8%AA%EF%BC%89"><span class="toc-number">10.1.1.</span> <span class="toc-text">创建型模式（5个）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%887%E4%B8%AA%EF%BC%89"><span class="toc-number">10.1.2.</span> <span class="toc-text">结构型模式（7个）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%8811%E4%B8%AA%EF%BC%89"><span class="toc-number">10.1.3.</span> <span class="toc-text">行为型模式（11个）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7%E4%B8%8E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">静态属性与静态方法？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%A2%AB%E7%BB%A7%E6%89%BF%EF%BC%9F%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%A2%AB%E9%87%8D%E5%86%99%EF%BC%9F%E4%BB%A5%E5%8F%8A%E5%8E%9F%E5%9B%A0%EF%BC%9F"><span class="toc-number">11.1.</span> <span class="toc-text">问题：静态属性和静态方法是否可以被继承？是否可以被重写？以及原因？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%EF%BC%9F"><span class="toc-number">12.</span> <span class="toc-text">java集合框架？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9AJava%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%EF%BC%8CList%E3%80%81Map%E3%80%81Set%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E5%85%B7%E4%BD%93%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB%EF%BC%8C%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">12.1.</span> <span class="toc-text">问题：Java集合框架，List、Map、Set都有哪些具体的实现类，区别是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#List"><span class="toc-number">12.2.</span> <span class="toc-text">List</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set"><span class="toc-number">12.3.</span> <span class="toc-text">Set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map"><span class="toc-number">12.4.</span> <span class="toc-text">Map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">12.5.</span> <span class="toc-text">总结：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">泛型基本问题？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8BJava%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%EF%BC%8C%E6%B3%9B%E5%9E%8B%E6%93%A6%E9%99%A4%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9A%84%E6%A6%82%E5%BF%B5%E3%80%81%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%88%86%E6%B4%BE%EF%BC%9F"><span class="toc-number">13.1.</span> <span class="toc-text">问题：简单介绍一下Java中的泛型，泛型擦除以及相关的概念、解析与分派？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-number">14.</span> <span class="toc-text">反射基本问题？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9Java%E5%8F%8D%E5%B0%84%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-number">14.1.</span> <span class="toc-text">问题：说说你对Java反射的理解？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%EF%BC%9F"><span class="toc-number">15.</span> <span class="toc-text">匿名内部类？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9AJava%E7%9A%84%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E6%9C%89%E5%93%AA%E4%BA%9B%E9%99%90%E5%88%B6%EF%BC%9F"><span class="toc-number">15.1.</span> <span class="toc-text">问题：Java的匿名内部类有哪些限制？</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/f2c6e9a2.html" title="2024年5月31日-Java面试题">2024年5月31日-Java面试题</a><time datetime="2024-05-31T07:32:37.000Z" title="发表于 2024-05-31 15:32:37">2024-05-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/7942b5c7.html" title="LeetCode_2644总结">LeetCode_2644总结</a><time datetime="2024-05-19T03:55:23.000Z" title="发表于 2024-05-19 11:55:23">2024-05-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/e65909f7.html" title="自定义博客测试">自定义博客测试</a><time datetime="2024-05-17T02:53:18.000Z" title="发表于 2024-05-17 10:53:18">2024-05-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4a17b156.html" title="Hello World">Hello World</a><time datetime="2024-05-15T04:04:04.907Z" title="发表于 2024-05-15 12:04:04">2024-05-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By JackAAAAA</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://www.jackAAAAA.github.io/">blog</a>! <a href="icp链接"><img class="icp-icon" src="icp图片"><span>备案号：xxxxxx</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
